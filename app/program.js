@@ -1,4 +1,6 @@
 process.stdin.setEncoding('utf-8');
+var OSinfo = require('../modules/OSinfo');
+var time = require('../modules/time');
 
 process.stdin.on('readable', function() {
     var input = process.stdin.read();
@@ -17,9 +19,16 @@ process.stdin.on('readable', function() {
         case '/nodeL':
             console.log(process.env.LANG);
             break;
+        case '/getOSinfo':
+            OSinfo.print();
+            break;
+        case '/time':
+            time.print();
+            break;
         default:
             process.stderr.write('Wrong instruction!\n');
             break;
         }
     }    
 });
+

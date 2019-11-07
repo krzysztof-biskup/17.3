@@ -10,7 +10,6 @@ function getOSinfo() {
         type = 'Windows';
     }
     var cpu = os.cpus()[0].model;
-    var uptime = os.uptime();
     var userInfo = os.userInfo();
     var times = time.timeOS();
     console.log('System:', type);

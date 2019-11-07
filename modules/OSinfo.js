@@ -1,6 +1,6 @@
 var os = require('os');
 var time = require('./time');
-//console.log(time.print);
+
 function getOSinfo() {
     var type = os.type();
     var release = os.release();
